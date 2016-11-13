@@ -9,7 +9,7 @@ def main():
 	mean(num_array)
 	print 'mean', mean(num_array)
 	print 'median', median(num_array)
-	print 'mode', mymode(num_array)
+	print 'mode', mode(num_array)
 
 def mean(list):
 	sum = 0
@@ -26,7 +26,7 @@ def median(lst):
     else:
             return float(sum(lst[(len(lst)/2)-1:(len(lst)/2)+1]))/2.0
 
-def mymode(list):
+def mode(list):
 	d = {}
 	for elm in list:
 		try:
