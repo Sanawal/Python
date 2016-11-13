@@ -1,0 +1,4 @@
+In this project there is a library named 'sanawal_alvi'
+Copy this file ('sanawal_alvi') in your Python27>Lib folder (i.e. C:\Python27\Lib)
+Simply import my library to any of your python file and use its functions
+A demo of using my library is given in check.py file
