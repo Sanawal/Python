@@ -15,7 +15,7 @@ def mean(list):
 	sum = 0
 	for elm in list:
 		sum += elm
-	return sum/len(list);
+	return float(sum)/float(len(list));
 
 def median(lst):
     lst = sorted(lst)
