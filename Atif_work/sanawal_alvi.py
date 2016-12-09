@@ -1,3 +1,5 @@
+from math import sqrt
+
 def main():
 	num_array = list()
 	num = float(raw_input("Enter how many elements you want in array:"))
@@ -6,10 +8,11 @@ def main():
 	    n = float(raw_input("num :"))
 	    num_array.append(float (n))
 	print 'Your Entered array: ',num_array
-	mean(num_array)
-	print 'mean', mean(num_array)
-	print 'median', median(num_array)
-	print 'mode', mode(num_array)
+	print 'mean: ', mean(num_array)
+	print 'median: ', median(num_array)
+	print 'mode: ', mode(num_array)
+	print 'variance: ', variance(num_array)
+	print 'standard_deviation: ', standard_deviation(num_array)
 
 def mean(list):
 	sum = 0
@@ -46,6 +49,25 @@ def mode(list):
 		if d[key] == max:
 			max_k.append(key),
 	return max_k
+
+def variance(list):
+    num_of_items = len(list)
+    mean = float(sum(list)) / num_of_items
+    differences = [x - mean for x in list]
+    sq_differences = [d ** 2 for d in differences]
+    sum_sq_d = float(sum(sq_differences))
+    variance = float(sum_sq_d / num_of_items)
+    return variance
+
+def standard_deviation(list):
+    num_of_items = len(list)
+    mean = float(sum(list)) / num_of_items
+    differences = [x - mean for x in list]
+    sq_differences = [d ** 2 for d in differences]
+    sum_sq_d = float(sum(sq_differences))
+    variance = float(sum_sq_d / num_of_items)
+    sd = float(sqrt(variance))
+    return sd
 
 if __name__ == "__main__":
   main()
